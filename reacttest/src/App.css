@@ -1,0 +1,8 @@
+.App {
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(44, 139, 60);
+  margin-bottom: 30px;
+  margin-top: 30px;
+}

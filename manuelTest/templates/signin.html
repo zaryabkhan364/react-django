@@ -1,0 +1,28 @@
+<div class="cover-container d-flex w-100 h-100 p-5 mx-auto flex-column bg-dark">
+  {% extends 'home.html' %} {% block content %} {% if error %} {{error}}
+  <br />
+  <br />
+  {% endif%}
+
+  <div class="mt-0 bg-dark">
+    <h1>Sign In</h1>
+    <br />
+
+    <form method="POST" action="{% url 'signin' %}">
+      {% csrf_token %} Username:
+      <br />
+      <input type="text" name="username" />
+      <br />
+      <br />
+      Password:
+      <br />
+      <input type="password" name="password" />
+      <br />
+      <br />
+
+      <input class="btn btn-primary" type="submit" value="Sign In" />
+    </form>
+  </div>
+
+  {% endblock %}
+</div>

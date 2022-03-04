@@ -1,0 +1,23 @@
+{% extends 'home.html' %} {% block content %}
+
+<h1 class="text-center pt-3">Welcome to Manuel's Blog</h1>
+<br />
+<br />
+<h2>Latest Posts</h2>
+<hr />
+<br />
+{% for blog in blogs.all %} {% comment %}
+<a href="{% url 'detail' blog.id %}">
+  {% endcomment %}
+  <h3>{{ blog.title }}</h3>
+
+  <br />
+  <img class="img-fluid" height="200" width="300" src="{{ blog.image.url }}" />
+  <br />
+  <p>{{ blog.body }}</p>
+  <br />
+  {% endfor %}
+
+  <hr />
+  {% endblock %}
+</a>
